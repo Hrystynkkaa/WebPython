@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Успішно створено страховий поліс</title>
+</head>
+<body>
+    <h1>Успішно створено страховий поліс!</h1>
+    <p>ID полісу: {{ policy_id }}</p>
+    <p>Назва полісу: {{ policy.policy_name }}</p>
+    <p>Сума покриття: {{ policy.coverage_amount }}</p>
+    <p>Користувач ID: {{ policy.user_id }}</p>
+
+    <br>
+    <a href="/">На головну</a>
+</body>
+</html>
+

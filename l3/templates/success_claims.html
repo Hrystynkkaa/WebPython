@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Успішно створено заяву</title>
+</head>
+<body>
+    <h1>Успішно створено заяву</h1>
+    <p>ID заяви: {{ claim._id }}</p>
+    <p>Сума заяви: {{ claim.claim_amount }}</p>
+    <p>Поліс ID: {{ claim.policy_id }}</p>
+
+    <br>
+    <a href="/">На головну</a>
+</body>
+</html>
+

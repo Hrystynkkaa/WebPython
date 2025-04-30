@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if claim %}Редагувати{% else %}Нова{% endif %} заява</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>{% if claim %}Редагувати{% else %}Нова{% endif %} заява</h1>
+    <form method="post">
+        {% csrf_token %}
+        Сума: <input type="number" name="amount" value="{{ claim.amount|default:'' }}"><br>
+        Поліс (ID): <input type="number" name="policy_id" value="{{ claim.policy_id|default:'' }}"><br>
+        <button type="submit">Зберегти</button>
+    </form>
+</body>
+</html>

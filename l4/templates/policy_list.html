@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страхові поліси</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Страхові поліси</h1>
+    <a href="{% url 'policy_create' %}" class="btn btn-primary">Додати поліс</a>
+    <ul class="policy-list">
+        {% for policy in policies %}
+        <li class="policy-item">
+            ID: {{ policy.id }} — {{ policy.coverage }}
+            <a href="{% url 'policy_update' policy.id %}" class="btn btn-edit">Редагувати</a>
+            <a href="{% url 'policy_delete' policy.id %}" class="btn btn-delete">Видалити</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

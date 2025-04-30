@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if policy %}Редагувати{% else %}Новий{% endif %} поліс</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>{% if policy %}Редагувати{% else %}Новий{% endif %} поліс</h1>
+    <form method="post">
+        {% csrf_token %}
+        Користувач (ID): <input type="number" name="user_id" value="{{ policy.user_id|default:'' }}"><br>
+        Страхова сума: <input type="number" name="coverage" value="{{ policy.coverage|default:'' }}"><br>
+        <button type="submit">Зберегти</button>
+    </form>
+</body>
+</html>

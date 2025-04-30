@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if user %}Редагувати{% else %}Новий{% endif %} користувач</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>{% if user %}Редагувати{% else %}Новий{% endif %} користувач</h1>
+    <form method="post" class="user-form">
+        {% csrf_token %}
+        
+        <label for="name">Ім'я:</label>
+        <input type="text" name="name" id="name" value="{{ user.name|default:'' }}" required><br>
+
+        <label for="role">Роль:</label>
+        <select name="role" id="role" required>
+            <option value="admin" {% if user.role == 'admin' %}selected{% endif %}>Адміністратор</option>
+            <option value="user" {% if user.role == 'user' %}selected{% endif %}>Користувач</option>
+        </select><br>
+        
+        <button type="submit" class="btn btn-primary">Зберегти</button>
+    </form>
+</body>
+</html>
+

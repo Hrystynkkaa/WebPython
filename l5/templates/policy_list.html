@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страхові поліси</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Страхові поліси</h1>
+    <a href="{% url 'home' %}" class="btn btn-home">Головна</a>
+    <ul class="policy-list">
+        {% for policy in policies %}
+        <li class="policy-item">
+            ID: {{ policy.id }} — {{ policy.coverage }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

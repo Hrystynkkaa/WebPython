@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заяви</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>Заяви</h1>
+    <a href="{% url 'home' %}" class="btn btn-home">Головна</a>
+    <a href="{% url 'claim_create' %}" class="btn btn-create">Додати заяву</a>
+
+    <ul>
+        {% for claim in claims %}
+        <li>Поліс ID: {{ claim.policy_id }}, Сума: {{ claim.amount }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

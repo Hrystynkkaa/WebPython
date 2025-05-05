@@ -1,0 +1,211 @@
+/* Основні стилі для тіла сторінки */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стилі для контейнера */
+.container {
+    width: 60%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовок */
+h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h2 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+p {
+    color: #2c3e50;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Стилі для карток */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h2 {
+    color: #2980b9;
+    font-size: 1.3em;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+/* Кнопки */
+button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Сітка для мобільних пристроїв */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .card {
+        margin: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Форма */
+form {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    border: none;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2ecc71;
+}
+/* Стилі для списку користувачів */
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 60%;
+    margin: 0 auto;
+}
+
+li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Стилі для посилань всередині списку */
+li a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #2980b9;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+li a:hover {
+    color: #3498db;
+}
+/* Основні стилі для кнопок */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Стиль для кнопки "Головна" */
+.btn-home {
+    background-color: #4CAF50; /* Зелений фон */
+    color: white; /* Білий текст */
+    border: none;
+}
+
+.btn-home:hover {
+    background-color: #45a049; /* Темніший зелений при наведенні */
+    color: #fff;
+}
+
+/* Стиль для кнопки "Вийти" */
+.btn-logout {
+    background-color: #f44336; /* Червоний фон */
+    color: white; /* Білий текст */
+    border: none;
+}
+
+.btn-logout:hover {
+    background-color: #e53935; /* Темніший червоний при наведенні */
+    color: #fff;
+}
+
+/* Стиль для кнопки "Додати користувача" */
+.btn-user-create {
+    background-color: #008CBA; /* Синій фон */
+    color: white; /* Білий текст */
+    border: none;
+}
+
+.btn-user-create:hover {
+    background-color: #007bb5; /* Темніший синій при наведенні */
+    color: #fff;
+}
+
+

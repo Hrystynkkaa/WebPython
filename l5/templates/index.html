@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+    {% if request.session.role == 'admin' %}
+        <li><a href="{% url 'user_list' %}">Управління користувачами</a></li>
+        <li><a href="{% url 'policy_list' %}">Управління страховими полісами</a></li>
+        <li><a href="{% url 'claim_list' %}">Управління заявами</a></li>
+    {% elif request.session.role == 'user' %}
+        <li><a href="{% url 'policy_list' %}">Мої страхові поліси</a></li>
+        <li><a href="{% url 'claim_list' %}">Мої заяви</a></li>
+    {% endif %}
+</ul>
+{% endblock %}
+

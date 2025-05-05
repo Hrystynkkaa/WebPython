@@ -1,0 +1,26 @@
+<!-- templates/login.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Вхід</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h2>Вхід</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label>Ім’я користувача:</label><br>
+        <input type="text" name="username" required><br><br>
+
+        <label>Роль:</label><br>
+        <select name="role" required>
+            <option value="admin">Адміністратор</option>
+            <option value="user">Користувач</option>
+        </select><br><br>
+
+        <button type="submit">Увійти</button>
+    </form>
+</body>
+</html>
